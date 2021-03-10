@@ -1,6 +1,9 @@
 export const API_URL =
   process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
 
+export const MAGIC_PUBLIC_KEY =
+  process.env.NEXT_PUBLIC_MAGIC_PUBLIC_KEY || "pk_test_1C84D4395BC4EB8C";
+
 /**
  * Given and image return the URL
  * Works for local and deployed strapis
