@@ -4,6 +4,9 @@ export const API_URL =
 export const MAGIC_PUBLIC_KEY =
   process.env.NEXT_PUBLIC_MAGIC_PUBLIC_KEY || "pk_test_1C84D4395BC4EB8C";
 
+export const STRIPE_PK =
+  process.env.NEXT_PUBLIC_STIPE_PK || "pk_test_1C84D4395BC4EB8C";
+
 /**
  * Given and image return the URL
  * Works for local and deployed strapis

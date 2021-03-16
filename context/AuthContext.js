@@ -40,6 +40,17 @@ export const AuthProvider = (props) => {
     } catch (error) {}
   };
 
+  /**
+   * Retrieves the Magic Issues Bearer Token
+   * This allows User to make authenticated requests
+   */
+  const getToken = async () => {
+    try {
+      const token = await magic.user.getIdToken();
+      return token;
+    } catch (error) {}
+  };
+
   // called only once when the page first loads
   useEffect(() => {
     magic = new Magic(MAGIC_PUBLIC_KEY);
@@ -47,7 +58,7 @@ export const AuthProvider = (props) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, logoutUser, loginUser }}>
+    <AuthContext.Provider value={{ user, logoutUser, loginUser, getToken }}>
       {props.children}
     </AuthContext.Provider>
   );
